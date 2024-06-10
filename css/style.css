@@ -413,8 +413,9 @@ button {
 .about_section {
     width: 100%;
     float: left;
-    background-color: #16014a;
+    background-color: #0F0869;
     margin-top: 70px;
+    max-height: 300px;
 }
 
 .about_taital {
@@ -422,6 +423,12 @@ button {
     float: right;
     margin-top: 80px;
 }
+.about_taital5 {
+    width: 63%;
+    float: left;
+    margin-top: 80px;
+}
+
 
 .about_text {
     width: 100%;
@@ -434,11 +441,13 @@ button {
 .about_img {
     width: 100%;
     float: left;
+    max-height: 300px;
+    overflow: hidden;
 }
 .about_section2 {
     width: 100%;
     float: left;
-    background-color: #16014a;
+    background-color: #0F0869;
     margin-top: 70px;
 }
 
@@ -463,7 +472,7 @@ button {
 .about_section3 {
     width: 100%;
     float: left;
-    background-color: #16014a;
+    background-color: #0F0869;
     margin-top: 70px;
 }
 
@@ -481,10 +490,13 @@ button {
     font-weight: bold;
 }
 
-.about_img3 {
+.about_img2 {
     width: 100%;
-    float: right; /* Changed from left to right */
+    float: left;
+    max-height: 300px;
+    overflow: hidden;; /* Changed from left to right */
 }
+
 .centered-gradient-text {
     text-align: center;
     display: flex;
@@ -915,10 +927,73 @@ textarea#comment.massage-bt::placeholder {
     height: auto;
 }
 .logo_image {
-    width: 50%; /* Pas de waarde aan om de gewenste grootte te krijgen */
+    width: 70%; /* Pas de waarde aan om de gewenste grootte te krijgen */
     height: auto; /* Zorgt ervoor dat de verhouding behouden blijft */
     z-index: 10; /* Pas de waarde aan afhankelijk van je behoefte */
     position: relative; /* Voeg position toe om z-index te laten werken */
+}
+
+.image_pa {
+    width: 450px; /* Pas de breedte aan naar wens */
+    height: auto; /* Zorgt ervoor dat de verhouding behouden blijft */
+    z-index: 10; /* Pas de waarde aan afhankelijk van je behoefte */
+    position: relative; /* Voeg position toe om z-index te laten werken */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Maak de schaduw groter en donkerder */
+    border-radius: 15px; /* Maak de hoeken rond */
+    transition: transform 0.3s, box-shadow 0.3s; /* Voeg een overgangseffect toe voor hover */
+    margin-right: 15px; /* Voeg ruimte toe tussen de afbeelding en de tekst */
+}
+
+.image_pa:hover {
+    transform: scale(1.05); /* Vergroot de afbeelding lichtjes bij hover */
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.7); /* Versterk de schaduw bij hover */
+}
+
+.contact-link {
+    color: inherit; /* Zorgt ervoor dat de link dezelfde kleur heeft als de omringende tekst */
+    text-decoration: none; /* Verwijdert de onderstreping van de link */
+}
+
+.contact-link:hover {
+    text-decoration: underline; /* Voeg onderstreping toe bij hover voor een visueel effect */
+}
+
+.info-container {
+    display: flex; /* Gebruik flexbox om de kinderen naast elkaar te plaatsen */
+    align-items: center; /* Centreer de items verticaal */
+    flex-grow: 1; /* Laat de container groeien om beschikbare ruimte te vullen */
+    padding: 10px; /* Voeg wat padding toe voor ruimte binnen de container */
+    max-width: 100%; /* Zorg ervoor dat de container niet buiten de kolom gaat */
+    flex-wrap: wrap; /* Zorg ervoor dat de items kunnen ombreken naar een nieuwe regel */
+}
+
+.text-container {
+    display: flex; /* Gebruik flexbox om de tekst onder elkaar te plaatsen */
+    flex-direction: column; /* Plaats de kinderen in een kolom */
+    flex-grow: 1; /* Laat de tekstcontainer groeien om beschikbare ruimte te vullen */
+    font-size: 1.2em; /* Verhoog de lettergrootte voor betere leesbaarheid */
+}
+
+.info-text {
+    font-size: 1.2em; /* Verhoog de lettergrootte voor betere leesbaarheid */
+    margin: 5px 0; /* Voeg wat ruimte toe tussen de regels tekst */
+}
+
+/* Media Queries voor responsiviteit */
+@media (max-width: 767px) {
+    .info-container {
+        flex-direction: column; /* Plaats de items onder elkaar op kleinere schermen */
+        align-items: flex-start; /* Align de items aan de linkerkant */
+    }
+    
+    .image_pa {
+        margin-right: 0; /* Verwijder de rechter marge op kleinere schermen */
+        margin-bottom: 15px; /* Voeg marge aan de onderkant toe voor ruimte tussen de afbeelding en de tekst */
+    }
+    
+    .text-container {
+        align-items: flex-start; /* Align de tekst aan de linkerkant op kleinere schermen */
+    }
 }
 
 
