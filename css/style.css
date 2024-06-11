@@ -255,7 +255,15 @@ button {
     float: left;
     background-color: #fff;
     height: auto;
+    margin-left: 0; /* No margin on mobile */
 }
+
+@media (min-width: 768px) {
+    .banner_section {
+        margin-left: 200px; /* Add left margin for larger screens */
+    }
+}
+
 
 #carouselExampleIndicators a.carousel-control-prev {
     position: absolute;
@@ -410,65 +418,8 @@ button {
     color: #000000;
 }
 
-.about_section {
-    width: 100%;
-    float: left;
-    background-color: #0F0869;
-    margin-top: 70px;
-    max-height: 300px;
-}
-
-.about_taital {
-    width: 63%;
-    float: right;
-    margin-top: 80px;
-}
-.about_taital5 {
-    width: 63%;
-    float: left;
-    margin-top: 80px;
-}
-
-
-.about_text {
-    width: 100%;
-    float: left;
-    font-size: 40px;
-    color: #ffffff;
-    font-weight: bold;
-}
-
-.about_img {
-    width: 100%;
-    float: left;
-    max-height: 300px;
-    overflow: hidden;
-}
-.about_section2 {
-    width: 100%;
-    float: left;
-    background-color: #0F0869;
-    margin-top: 70px;
-}
-
-.about_taital2 {
-    width: 63%;
-    float: left; /* Changed from right to left */
-    margin-top: 80px;
-}
-
-.about_text2 {
-    width: 100%;
-    float: left;
-    font-size: 40px;
-    color: #ffffff;
-    font-weight: bold;
-}
-
-.about_img3 {
-    width: 100%;
-    float: right; /* Changed from left to right */
-}
+.about_section,
+.about_section2,
 .about_section3 {
     width: 100%;
     float: left;
@@ -476,26 +427,76 @@ button {
     margin-top: 70px;
 }
 
-.about_taital3 {
-    width: 63%;
-    position: center; /* Changed from right to left */
-    margin-top: 80px;
+.about_taital,
+.about_taital2,
+.about_taital3,
+.about_taital5 {
+    width: 100%; /* Adjust to 100% for mobile */
+    margin-top: 40px; /* Reduce margin-top for better spacing on mobile */
+    float: none; /* Reset float for better stacking on mobile */
+    text-align: center; /* Center align text on mobile */
+    padding: 0 15px; /* Add padding for better readability on mobile */
 }
 
+.about_text,
+.about_text2,
 .about_text3 {
     width: 100%;
-    text-align: center;
-    font-size: 40px;
+    font-size: 24px; /* Reduce font size for better readability on mobile */
     color: #ffffff;
     font-weight: bold;
 }
 
-.about_img2 {
-    width: 100%;
-    float: left;
-    max-height: 300px;
-    overflow: hidden;; /* Changed from left to right */
+.about_text2 {
+    margin-top: 20px; /* Reduce top margin for better spacing on mobile */
 }
+
+.about_text3 {
+    text-align: center;
+}
+
+.about_img,
+.about_img2,
+.about_img3 {
+    width: 100%;
+    max-height: 200px; /* Reduce max-height for better fit on mobile */
+    overflow: hidden; /* Add margin-bottom for better spacing on mobile */
+}
+
+@media (min-width: 768px) {
+    .about_taital,
+    .about_taital2,
+    .about_taital3,
+    .about_taital5 {
+        width: 63%;
+        margin-top: 80px; /* Restore original margin-top for larger screens */
+        float: none; /* Restore original float */
+        text-align: left; /* Align text to left on larger screens */
+    }
+
+    .about_taital2 {
+        float: left; /* Adjust float for larger screens */
+    }
+
+    .about_img,
+    .about_img2,
+    .about_img3 {
+        max-height: 300px; /* Restore original max-height for larger screens */
+    }
+
+    .about_img3 {
+        float: right; /* Adjust float for larger screens */
+    }
+
+    .about_taital3 {
+        text-align: center; /* Center text for larger screens */
+    }
+
+    .about_img2 {
+        float: left; /* Adjust float for larger screens */
+    }
+}
+
 
 .centered-gradient-text {
     text-align: center;
@@ -827,7 +828,7 @@ textarea#comment.massage-bt::placeholder {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     background-color: #020727
-    color: #fff;
+    color: #fff;  
     border: 0px;
 }
 
@@ -859,44 +860,29 @@ textarea#comment.massage-bt::placeholder {
     text-align: center;
     font-size: 30px;
     color: #000000;
-    border-bottom: 1px solid #ffffff;
+    border-bottom: 1px solid #000000;
     padding-top: 25px;
 }
 
-.map_addres {
-    width: 100%;
-    float: left;
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
-
 .map_text {
-    width: 100%;
-    float: left;
-    font-size: 20px;
-    color: #000000;
     display: flex;
+    align-items: center;
+    margin-bottom: 10px;
 }
-
 .map_icon {
-    padding-left: 10px;
-    padding-top: 10px;
+    margin-left: 10px;
 }
-
-.social_icon {
-    width: 15%;
-    margin: 0 auto;
-    text-align: center;
+.map_text i {
+    font-size: 24px; /* Grotere iconen */
+    margin-top: 5px; /* Verplaats de iconen iets naar beneden */
+    color: #000;
 }
-
-.social_icon ul {
-    margin: 0px;
-    padding: 0px
+.map_text a {
+    color: #000; /* Zwarte kleur voor de <a>-tags */
+    text-decoration: none; /* Optioneel: verwijder onderstreping */
 }
-
-.social_icon li {
-    float: left;
-    padding-left: 10px;
+.map_text a:hover {
+    text-decoration: underline; /* Optioneel: onderstreep bij hover */
 }
 
 .copyright_section {
@@ -926,73 +912,101 @@ textarea#comment.massage-bt::placeholder {
     width: 100%;
     height: auto;
 }
-.logo_image {
-    width: 70%; /* Pas de waarde aan om de gewenste grootte te krijgen */
-    height: auto; /* Zorgt ervoor dat de verhouding behouden blijft */
-    z-index: 10; /* Pas de waarde aan afhankelijk van je behoefte */
-    position: relative; /* Voeg position toe om z-index te laten werken */
+.banner_section {
+    background-color: #ffffff; /* Example background color */
+    padding: 20px 0;
 }
 
-.image_pa {
-    width: 450px; /* Pas de breedte aan naar wens */
-    height: auto; /* Zorgt ervoor dat de verhouding behouden blijft */
-    z-index: 10; /* Pas de waarde aan afhankelijk van je behoefte */
-    position: relative; /* Voeg position toe om z-index te laten werken */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Maak de schaduw groter en donkerder */
-    border-radius: 15px; /* Maak de hoeken rond */
-    transition: transform 0.3s, box-shadow 0.3s; /* Voeg een overgangseffect toe voor hover */
-    margin-right: 15px; /* Voeg ruimte toe tussen de afbeelding en de tekst */
+.container-fluid {
+    max-width: 10200px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
-.image_pa:hover {
-    transform: scale(1.05); /* Vergroot de afbeelding lichtjes bij hover */
-    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.7); /* Versterk de schaduw bij hover */
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.contact-link {
-    color: inherit; /* Zorgt ervoor dat de link dezelfde kleur heeft als de omringende tekst */
-    text-decoration: none; /* Verwijdert de onderstreping van de link */
+.logo-container, .info-container {
+    display: flex;
+    align-items: center;
 }
 
-.contact-link:hover {
-    text-decoration: underline; /* Voeg onderstreping toe bij hover voor een visueel effect */
+.logo-container {
+    flex: 1;
 }
 
 .info-container {
-    display: flex; /* Gebruik flexbox om de kinderen naast elkaar te plaatsen */
-    align-items: center; /* Centreer de items verticaal */
-    flex-grow: 1; /* Laat de container groeien om beschikbare ruimte te vullen */
-    padding: 10px; /* Voeg wat padding toe voor ruimte binnen de container */
-    max-width: 100%; /* Zorg ervoor dat de container niet buiten de kolom gaat */
-    flex-wrap: wrap; /* Zorg ervoor dat de items kunnen ombreken naar een nieuwe regel */
+    flex: 2;
+    display: flex;
+    align-items: center;
 }
 
 .text-container {
-    display: flex; /* Gebruik flexbox om de tekst onder elkaar te plaatsen */
-    flex-direction: column; /* Plaats de kinderen in een kolom */
-    flex-grow: 1; /* Laat de tekstcontainer groeien om beschikbare ruimte te vullen */
-    font-size: 1.2em; /* Verhoog de lettergrootte voor betere leesbaarheid */
+    margin-left: 15px;
 }
 
-.info-text {
-    font-size: 1.2em; /* Verhoog de lettergrootte voor betere leesbaarheid */
-    margin: 5px 0; /* Voeg wat ruimte toe tussen de regels tekst */
+.logo_image, .image_pa {
+    max-height: 450px; /* Adjust as needed */
 }
 
-/* Media Queries voor responsiviteit */
-@media (max-width: 767px) {
-    .info-container {
-        flex-direction: column; /* Plaats de items onder elkaar op kleinere schermen */
-        align-items: flex-start; /* Align de items aan de linkerkant */
+.contact-link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+        align-items: center;
     }
-    
-    .image_pa {
-        margin-right: 0; /* Verwijder de rechter marge op kleinere schermen */
-        margin-bottom: 15px; /* Voeg marge aan de onderkant toe voor ruimte tussen de afbeelding en de tekst */
+
+    .logo-container, .info-container {
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 15px;
     }
-    
+
     .text-container {
-        align-items: flex-start; /* Align de tekst aan de linkerkant op kleinere schermen */
+        margin-left: 0;
+        text-align: left;
+        margin-top: 10px; /* Add some margin to separate text from the image */
+    }
+
+    .logo_image, .image_pa {
+        max-height: 300px;
+        align-items: center; /* Adjust as needed for mobile */
+    }
+    .image_pa{
+        margin-left: 0px;
+    }
+}
+
+ 
+
+.image_pa {
+    width: 450px; /* Adjust the width as desired */
+    height: auto; /* Ensure aspect ratio is maintained */
+    z-index: 10; /* Adjust the value as per your needs */
+    position: relative; /* Add position to make z-index work */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Make the shadow larger and darker */
+    border-radius: 15px; /* Round the corners */
+    transition: transform 0.3s, box-shadow 0.3s; /* Add a transition effect for hover */
+    margin-right: 15px; /* Add space between the image and the text */
+}
+
+@media (min-width: 768px) {
+    .image_pa {
+        margin-left: 200px; /* Add left margin for larger screens */
     }
 }
 
