@@ -223,7 +223,6 @@ button {
     float: left;
     background-color: #fff;
     height: auto;
-    padding-top: 15px;
     padding-bottom: 5px;
 }
 
@@ -459,8 +458,8 @@ button {
 .about_img2,
 .about_img3 {
     width: 100%;
-    max-height: 200px; /* Reduce max-height for better fit on mobile */
-    overflow: hidden; /* Add margin-bottom for better spacing on mobile */
+    max-height: 200px;
+    overflow: hidden; /* Reduce max-height for better fit on mobile */ /* Zorgt ervoor dat de afbeelding de container volledig vult zonder te vervormen */
 }
 
 @media (min-width: 768px) {
@@ -481,7 +480,7 @@ button {
     .about_img,
     .about_img2,
     .about_img3 {
-        max-height: 300px; /* Restore original max-height for larger screens */
+        max-height: 500px; /* Restore original max-height for larger screens */
     }
 
     .about_img3 {
@@ -495,6 +494,20 @@ button {
     .about_img2 {
         float: left; /* Adjust float for larger screens */
     }
+}
+.about_img5 {
+    width: 100%;
+    height: 500px; /* Zorgt ervoor dat de afbeeldingen een vaste hoogte hebben */
+    overflow: hidden; /* Verbergt delen van de afbeelding die buiten de container vallen */
+    position: relative; /* Maakt het mogelijk om de inhoud te verplaatsen */
+}
+
+.about_img5 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Zorgt ervoor dat de afbeelding de container volledig vult zonder te vervormen */
+    object-position: center; /* Zorgt ervoor dat het midden van de afbeelding wordt getoond */
+    transform: scale(1.1) translateY(10px); /* Schaal de afbeelding en verplaats deze iets naar beneden */
 }
 
 
@@ -819,6 +832,24 @@ textarea#comment.massage-bt::placeholder {
     padding-bottom: 80px;
 }
 
+.addres_text {
+    text-align: center;
+    font-size: 24px; /* Increase text size */
+}
+
+.map_addres .map_text i {
+    font-size: 24px; /* Increase icon size */
+}
+
+.map_addres .map_text .map_icon a {
+    font-size: 18px; /* Increase text size */
+    display: block;
+    text-align: center;
+}
+
+.footer_line {
+    margin-bottom: 20px;
+}
 .input-group>.input-group-append>.btn,
 .input-group>.input-group-append>.input-group-text,
 .input-group>.input-group-prepend:first-child>.btn:not(:first-child),
@@ -867,8 +898,19 @@ textarea#comment.massage-bt::placeholder {
 .map_text {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 10px; /* Default margin */
 }
+.map_text2 {
+    display: flex;
+    flex-direction: column; /* Plaats de items in een kolom */
+    align-items: center; /* Centreer de items horizontaal */
+}
+
+.map_text_large {
+    margin-left: 25%; /* Default margin for larger screens */
+}
+
+
 .map_icon {
     margin-left: 10px;
 }
@@ -923,6 +965,12 @@ textarea#comment.massage-bt::placeholder {
     padding: 0 15px;
 }
 
+/* Als je Bootstrap gebruikt en de class 'row' al bepaalde eigenschappen heeft */
+.row.full-width {
+    width: 100vw; /* 100% van de viewport width */
+    margin: 0 calc(-50vw + 50%); /* negatieve marge om de volledige breedte te bereiken */
+}
+
 .content-wrapper {
     display: flex;
     align-items: center;
@@ -952,6 +1000,77 @@ textarea#comment.massage-bt::placeholder {
 .logo_image, .image_pa {
     max-height: 450px; /* Adjust as needed */
 }
+.header-container {
+    width: 100%;
+    padding: 10px 0; /* Optioneel: pas de padding aan naar wens */
+    background-color: #0F0869;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header_section .row {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.header_section .menu_text {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.header_section .menu_text ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Zorgt ervoor dat de menu-items in het midden worden uitgelijnd */
+}
+
+.header_section .menu_text li {
+    margin: 0;
+}
+
+.centered-gradient-text {
+    color: #fff; /* Pas de kleur naar wens aan */
+    text-decoration: none;
+    /* Voeg eventueel extra stijlen toe voor de tekst */
+}
+
+.overlay {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.9); /* Zwarte achtergrond met doorzichtigheid */
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay-content a {
+    color: #fff; /* Pas de kleur naar wens aan */
+    text-decoration: none;
+    font-size: 36px; /* Pas de lettergrootte naar wens aan */
+}
+
+.title_section {
+    text-align: center;
+}
+
+.title_text {
+    font-size: 24px; /* Pas de lettergrootte aan naar wens */
+    color: #000; /* Zwarte letters */
+    font-weight: bold;
+}
+
+
+
 
 .contact-link {
     color: #007bff;
@@ -994,8 +1113,8 @@ textarea#comment.massage-bt::placeholder {
  
 
 .image_pa {
-    width: 450px; /* Adjust the width as desired */
-    height: auto; /* Ensure aspect ratio is maintained */
+    width: 400px; /* Adjust the width as desired */
+    height: 400px; /* Ensure aspect ratio is maintained */
     z-index: 10; /* Adjust the value as per your needs */
     position: relative; /* Add position to make z-index work */
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Make the shadow larger and darker */
