@@ -479,6 +479,7 @@ button {
 
     .about_img,
     .about_img2,
+    .about_img6,
     .about_img3 {
         max-height: 500px; /* Restore original max-height for larger screens */
     }
@@ -500,6 +501,19 @@ button {
     height: 500px; /* Zorgt ervoor dat de afbeeldingen een vaste hoogte hebben */
     overflow: hidden; /* Verbergt delen van de afbeelding die buiten de container vallen */
     position: relative; /* Maakt het mogelijk om de inhoud te verplaatsen */
+}
+
+.about_img6 {
+    width: AUTO;
+    height: 500px; /* Zorgt ervoor dat de afbeeldingen een vaste hoogte hebben *//* Verbergt delen van de afbeelding die buiten de container vallen */
+    position: absolute;
+     /* Maakt het mogelijk om de inhoud te verplaatsen */
+}
+
+.about_img6 img {
+    width: 100%;
+    height: 70%;
+    object-position: center; /* Zorgt ervoor dat het midden van de afbeelding wordt getoond */
 }
 
 .about_img5 img {
@@ -884,6 +898,11 @@ textarea#comment.massage-bt::placeholder {
     color: #000000;
     padding-left: 175px;
 }
+@media (max-width: 767px) {
+    .center-text-mobile {
+       text-align: center;
+    }
+ }
 
 .addres_text {
     width: 10%;
