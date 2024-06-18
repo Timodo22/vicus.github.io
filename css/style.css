@@ -513,6 +513,11 @@ button {
         height: 300px; /* Pas de hoogte aan op mobiele apparaten */
     }
 }
+@media (max-width: 768px) {
+    .col-md-3.padding_0 {
+        height: 400px !important;
+    }
+}
 
 .about_img5 img {
     width: 100%;
