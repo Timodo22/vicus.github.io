@@ -479,7 +479,6 @@ button {
 
     .about_img,
     .about_img2,
-    .about_img6,
     .about_img3 {
         max-height: 500px; /* Restore original max-height for larger screens */
     }
@@ -496,24 +495,23 @@ button {
         float: left; /* Adjust float for larger screens */
     }
 }
-.about_img5 {
+.about_img6 {
     width: 100%;
-    height: 500px; /* Zorgt ervoor dat de afbeeldingen een vaste hoogte hebben */
-    overflow: hidden; /* Verbergt delen van de afbeelding die buiten de container vallen */
+    height: 500px; /* Zorgt ervoor dat de afbeeldingen een vaste hoogte hebben */ /* Verbergt delen van de afbeelding die buiten de container vallen */
     position: relative; /* Maakt het mogelijk om de inhoud te verplaatsen */
 }
-
-.about_img6 {
-    width: AUTO;
-    height: 500px; /* Zorgt ervoor dat de afbeeldingen een vaste hoogte hebben *//* Verbergt delen van de afbeelding die buiten de container vallen */
-    position: absolute;
-     /* Maakt het mogelijk om de inhoud te verplaatsen */
-}
-
 .about_img6 img {
     width: 100%;
-    height: 70%;
+    height: 100%;
+    object-fit: cover; /* Zorgt ervoor dat de afbeelding de container volledig vult zonder te vervormen */
     object-position: center; /* Zorgt ervoor dat het midden van de afbeelding wordt getoond */
+}
+
+
+@media (max-width: 768px) {
+    .about_img6 {
+        height: 300px; /* Pas de hoogte aan op mobiele apparaten */
+    }
 }
 
 .about_img5 img {
@@ -523,6 +521,13 @@ button {
     object-position: center; /* Zorgt ervoor dat het midden van de afbeelding wordt getoond */
     transform: scale(1.1) translateY(10px); /* Schaal de afbeelding en verplaats deze iets naar beneden */
 }
+.about_img5 {
+    width: 100%;
+    height: 500px; /* Zorgt ervoor dat de afbeeldingen een vaste hoogte hebben */
+    overflow: hidden; /* Verbergt delen van de afbeelding die buiten de container vallen */
+    position: relative; /* Maakt het mogelijk om de inhoud te verplaatsen */
+}
+
 
 
 .centered-gradient-text {
