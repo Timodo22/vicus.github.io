@@ -123,6 +123,25 @@ button:focus {
     outline: none;
 }
 
+.announcement-bar {
+    display: none;
+    background-color: #0F0869;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+/* Show announcement bar only on mobile devices */
+@media (max-width: 768px) {
+    .announcement-bar {
+        display: block;
+    }
+}
+@media (max-width: 768px) {
+    .aheader-container {
+        display: none;
+    }
+}
+
 li,
 ol {
     margin : 0px;
@@ -497,14 +516,28 @@ button {
 }
 .about_img6 {
     width: 100%;
-    height: 500px; /* Zorgt ervoor dat de afbeeldingen een vaste hoogte hebben */ /* Verbergt delen van de afbeelding die buiten de container vallen */
+    height: 300px; /* Zorgt ervoor dat de afbeeldingen een vaste hoogte hebben */
+    overflow: hidden; /* Verbergt delen van de afbeelding die buiten de container vallen */
     position: relative; /* Maakt het mogelijk om de inhoud te verplaatsen */
 }
+
 .about_img6 img {
-    width: 100%;
     height: 100%;
     object-fit: cover; /* Zorgt ervoor dat de afbeelding de container volledig vult zonder te vervormen */
     object-position: center; /* Zorgt ervoor dat het midden van de afbeelding wordt getoond */
+}
+
+@media (min-width: 1024px) { /* Adjust the min-width value to match your desktop breakpoint */
+    .about_img6 img {
+        object-fit: contain; /* Zorgt ervoor dat de gehele afbeelding zichtbaar is binnen de container */
+        object-position: center; /* Zorgt ervoor dat het midden van de afbeelding wordt getoond */
+    }
+}
+@media (max-width: 768px) { /* Adjust the min-width value to match your desktop breakpoint */
+    .about_img6 img {
+        width: 100%; /* Zorgt ervoor dat de gehele afbeelding zichtbaar is binnen de container */
+        object-position: center; /* Zorgt ervoor dat het midden van de afbeelding wordt getoond */
+    }
 }
 
 
@@ -521,14 +554,14 @@ button {
 
 .about_img5 img {
     width: 100%;
-    height: 100%;
+    height: 450px;
     object-fit: cover; /* Zorgt ervoor dat de afbeelding de container volledig vult zonder te vervormen */
-    object-position: center; /* Zorgt ervoor dat het midden van de afbeelding wordt getoond */
-    transform: scale(1.1) translateY(10px); /* Schaal de afbeelding en verplaats deze iets naar beneden */
+    object-position: center;
+    min-width: 350px; /* Zorgt ervoor dat het midden van de afbeelding wordt getoond */
 }
 .about_img5 {
     width: 100%;
-    height: 500px; /* Zorgt ervoor dat de afbeeldingen een vaste hoogte hebben */
+    height: 450px; /* Zorgt ervoor dat de afbeeldingen een vaste hoogte hebben */
     overflow: hidden; /* Verbergt delen van de afbeelding die buiten de container vallen */
     position: relative; /* Maakt het mogelijk om de inhoud te verplaatsen */
 }
@@ -557,6 +590,13 @@ button {
     color: #ffffff;
     margin-left: 0px;
 }
+
+@media (min-width: 1024px) { /* Adjust the min-width value to match your desktop breakpoint */
+    .long_text {
+        width: 160%;
+    }
+}
+
 
 .long_text1 {
     width: 100%;
@@ -911,6 +951,7 @@ textarea#comment.massage-bt::placeholder {
 @media (max-width: 767px) {
     .center-text-mobile {
        text-align: center;
+       margin-top: 30px;
     }
  }
 
