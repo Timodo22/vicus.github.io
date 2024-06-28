@@ -594,6 +594,7 @@ button {
 @media (min-width: 1024px) { /* Adjust the min-width value to match your desktop breakpoint */
     .long_text {
         width: 160%;
+        font: 16px;
     }
 }
 
@@ -1134,7 +1135,7 @@ textarea#comment.massage-bt::placeholder {
 }
 
 .title_text {
-    font-size: 24px; /* Pas de lettergrootte aan naar wens */
+    font-size: 60px; /* Pas de lettergrootte aan naar wens */
     color: #000; /* Zwarte letters */
     font-weight: bold;
 }
