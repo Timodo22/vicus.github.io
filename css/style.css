@@ -574,7 +574,7 @@ button {
     justify-content: center; /* Centreert de inhoud horizontaal */
     align-items: center; /* Centreert de inhoud verticaal */
     font-size: 20px; /* Pas de grootte van de tekst aan zoals nodig */
-    background: linear-gradient(to right,#000000, #ffffff);
+    background: linear-gradient(to right,#7f7e7e, #ffffff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -710,7 +710,6 @@ button {
     font-size: 40px;
     color: #0b0e13;
     border-bottom: 1px solid #020727
-    text-align: center;
 }
 
 .seemore_bt a {
