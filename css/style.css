@@ -956,7 +956,7 @@ textarea#comment.massage-bt::placeholder {
  }
 
 .addres_text {
-    width: 10%;
+    width: 30%;
     margin: 0 auto;
     text-align: center;
     font-size: 30px;
